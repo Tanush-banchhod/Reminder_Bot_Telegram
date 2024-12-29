@@ -43,10 +43,19 @@ A Telegram bot built using Python that allows users to set reminders and get not
    ```
    Your bot should now be running. You can interact with it via Telegram
 
+## How it works:                                                                                                                                            
+1. Setting a Reminder:
+   When a user sends the `/remind <seconds> <message>` command, the bot stores the reminder in an SQLite database with the user’s chat ID, reminder message, and the time when it should be triggered.
+2. Background Scheduler:
+   The bot runs a background scheduler that periodically checks for due reminders (e.g., every 60 seconds). When the scheduled time arrives, the bot sends the reminder message to the user.
+3. Listing Reminders:
+   Users can list their active reminders with the `/list` command. The bot queries the database for reminders and displays them.
 
-
-
-
-
+## Troubleshooting:
+   - Error: `sqlite3.DatabaseError: file is not a database` :
+        - Ensure the database file is valid. If corrupted, delete the reminders.db file and restart the bot. It will recreate the database file.
+    
+   - Reminder Notifications Not Working:
+        - Check if the reminder time is correctly calculated and that the background scheduler is running.
 
 
