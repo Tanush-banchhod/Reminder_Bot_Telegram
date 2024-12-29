@@ -19,5 +19,34 @@ A Telegram bot built using Python that allows users to set reminders and get not
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/yourusername/reminder-bot.git
+   git clone https://github.com/Tanush-banchhod/reminder-bot.git
    cd reminder-bot
+   ```
+2. **Create a virtual environment (optional but recommended)**:
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # For Windows, use `venv\Scripts\activate`
+   ```
+3. **Install Dependencies**:
+   ```bash
+   pip install -r requirements.txt
+   ```
+4. **Set up the bot token**:
+   - Create a new bot using the BotFather on Telegram.
+   - Copy the bot token and replace it in config/settings.py:
+   ```python
+      BOT_TOKEN = "YOUR_BOT_TOKEN"
+   ```
+5. **Run the bot**:
+   ```python
+   python main.py
+   ```
+   Your bot should now be running. You can interact with it via Telegram
+
+
+
+
+
+
+
+
